@@ -1,0 +1,37 @@
+{
+  "name": "@sfos/amap",
+  "version": "0.0.1",
+  "private": false,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "yarn build:clean && yarn build:lib && yarn build:esm-bundle",
+    "build:clean": "rimraf lib",
+    "build:lib": "vue-cli-service build --target lib --name index --dest lib src/index.ts"
+  },
+  "dependencies": {
+    "core-js": "^3.8.3",
+    "vue": "^3.2.13"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-plugin-typescript": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "@vue/eslint-config-typescript": "^9.1.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-vue": "^8.0.3",
+    "sass": "^1.69.5",
+    "sass-loader": "^12.0.0",
+    "typescript": "~4.5.5"
+  },
+  "files": [
+    "lib",
+    "src",
+    "LICENSE",
+    "README.md",
+    ".gitignore",
+    "package.json"
+  ]
+}

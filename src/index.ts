@@ -1,12 +1,15 @@
-import { AmapContainer } from './package/container';
+import { AMapContainer } from './package/container';
+import { AMapEllipse } from './modules/ellipse';
 import { App } from 'vue';
 
 export {
-  AmapContainer,
+  AMapEllipse,
+  AMapContainer,
 };
 
 export default {
   install: (app: App<Element>) => {
-    app.component('amap-container', AmapContainer);
+    app.component(AMapEllipse.name, AMapEllipse);
+    app.component(AMapContainer.name, AMapContainer);
   },
 };

@@ -1,3 +1,4 @@
-import AmapContainer from './src/container.vue';
+import AMapContainer from './src/container.vue';
+import './src/style.scss';
 
-export { AmapContainer };
+export { AMapContainer };

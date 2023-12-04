@@ -28,7 +28,7 @@ export function mergeOptions(option: any, ...options: any[]) {
           result[key] = (result[key] || []).concat(option[key]);
         } else if (typeof option[key] === 'object' && option[key] !== null) {
           result[key] = mergeOptions(result[key] || {}, option[key]);
-        } else {
+        } else if (option[key] !== undefined) {
           result[key] = option[key];
         }
       }

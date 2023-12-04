@@ -1,12 +1,19 @@
-import { AmapContainer } from './package/container';
+import { AMapLoadOptions, loadScript } from '@utils/load.ts';
+import { AMapContainer } from './package/container';
 import { App } from 'vue';
 
-export {
-  AmapContainer,
-};
+function install(app: App<Element>, options?: AMapLoadOptions) {
+  // package
+  app.component(AMapContainer.name, AMapContainer);
+  // load
+  if (options) {
+    loadScript(options);
+    options.isInit = true;
+  }
+  app.config.globalProperties.$AMap = options || {};
+}
 
 export default {
-  install: (app: App<Element>) => {
-    app.component('amap-container', AmapContainer);
-  },
+  install,
+  AMapContainer,
 };

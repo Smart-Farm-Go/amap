@@ -1,0 +1,12 @@
+{
+  "name": "@sfos/amap-docs",
+  "version": "0.0.1",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "vuepress dev .",
+    "build": "vuepress build ."
+  },
+  "devDependencies": {
+    "vuepress": "^2.0.0-rc.0"
+  }
+}
